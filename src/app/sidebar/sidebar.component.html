@@ -1,0 +1,43 @@
+<!-- dashboard-teme.component.html -->
+
+<div class="sidebar">
+  <h1>Dashboard</h1>
+  <nav>
+    <ul>
+      <li>
+        <a
+          [routerLink]="['propose-topic']"
+          routerLinkActive="router-link-active"
+          >Propune tema</a
+        >
+      </li>
+      <li>
+        <a [routerLink]="['accept-topic']" routerLinkActive="router-link-active"
+          >Accepta tema</a
+        >
+      </li>
+      <li>
+        <a
+          [routerLink]="['view-supervised']"
+          routerLinkActive="router-link-active"
+          >Vezi teme supervizate</a
+        >
+      </li>
+      <li>
+        <a
+          [routerLink]="['manage-documents']"
+          routerLinkActive="router-link-active"
+          >Gestionare Documente</a
+        >
+      </li>
+
+      <li>
+        <a
+          [routerLink]="['manage-documents']"
+          routerLinkActive="router-link-active"
+          >Log Out</a
+        >
+      </li>
+    </ul>
+  </nav>
+</div>

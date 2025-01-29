@@ -1,0 +1,44 @@
+.dashboard {
+  display: flex; /* Folosește Flexbox pentru a organiza sidebarul și conținutul */
+  height: 100vh; /* Asigură că întregul container ocupă înălțimea completă a ecranului */
+
+  .sidebar {
+    width: 250px; /* Lățimea sidebarului */
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    nav {
+      ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 10px;
+
+          a {
+            color: white;
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .content {
+    flex-grow: 1; /* Permite conținutului să ocupe restul spațiului disponibil */
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+}

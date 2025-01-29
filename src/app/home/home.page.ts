@@ -1,17 +1,12 @@
 import { Component } from '@angular/core';
-import {
-  IonContent,
-  IonHeader,
-  IonTitle,
-  IonToolbar,
-} from '@ionic/angular/standalone';
-import { TodoPage } from '../todo/todo.page';
+import { IonContent } from '@ionic/angular/standalone';
+import { SidebarComponent } from '../sidebar/sidebar.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, TodoPage],
+  imports: [IonContent, SidebarComponent],
 })
 export class HomePage {
   constructor() {}

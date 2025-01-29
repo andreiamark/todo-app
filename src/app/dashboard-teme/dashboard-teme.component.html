@@ -1,0 +1,42 @@
+<div class="dashboard">
+  <div class="sidebar">
+    <h1>Dashboard</h1>
+    <nav>
+      <ul>
+        <li>
+          <a
+            [routerLink]="['propose-topic']"
+            routerLinkActive="router-link-active"
+            >Propune tema</a
+          >
+        </li>
+        <li>
+          <a
+            [routerLink]="['accept-topic']"
+            routerLinkActive="router-link-active"
+            >Accepta tema</a
+          >
+        </li>
+        <li>
+          <a
+            [routerLink]="['view-supervised']"
+            routerLinkActive="router-link-active"
+            >Vezi teme supervizate</a
+          >
+        </li>
+        <li>
+          <a
+            [routerLink]="['manage-documents']"
+            routerLinkActive="router-link-active"
+            >Gestionare documente</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="content">
+    <router-outlet></router-outlet>
+    <!-- Conținutul dinamic al componentelor -->
+  </div>
+</div>

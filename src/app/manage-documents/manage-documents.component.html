@@ -1,0 +1,21 @@
+<h2>Documente încărcate</h2>
+<ul>
+  <li *ngFor="let doc of documents">
+    <div *ngIf="doc.status !== 'Aprobat'">
+      {{ doc.name }} - <button (click)="approveDocument(doc)">Aprobă</button>
+    </div>
+    <div *ngIf="doc.status === 'Aprobat'">
+      {{ doc.name }} - <button (click)="approveDocument(doc)">Aprobată</button>
+    </div>
+  </li>
+</ul>
+
+<h3>Încarcă un document</h3>
+<div class="upload-container">
+  <label for="file-upload" class="custom-file-upload">
+    📂 Alege un fișier
+  </label>
+  <input id="file-upload" type="file" (change)="uploadDocument($event)" />
+  <!-- <span *ngIf="selectedFile">{{ selectedFile.name }}</span> -->
+</div>
+<ng-template #approveTemplate> </ng-template>

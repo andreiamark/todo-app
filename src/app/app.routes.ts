@@ -1,17 +1,20 @@
 import { Routes } from '@angular/router';
-
+import { AcceptTopicComponent } from './accept-topic/accept-topic.component';
+import { DashboardTemeComponent } from './dashboard-teme/dashboard-teme.component';
+import { ManageDocumentsComponent } from './manage-documents/manage-documents.component';
+import { ProposeTopicComponent } from './propose-topic/propose-topic.component';
+import { ViewSupervisedComponent } from './view-supervised/view-supervised.component';
 export const routes: Routes = [
   {
-    path: 'home',
-    loadComponent: () => import('./home/home.page').then((m) => m.HomePage),
+    path: 'dashboard',
+    component: DashboardTemeComponent, // Main dashboard component
+    children: [
+      { path: 'propose-topic', component: ProposeTopicComponent },
+      { path: 'accept-topic', component: AcceptTopicComponent },
+      { path: 'view-supervised', component: ViewSupervisedComponent },
+      { path: 'manage-documents', component: ManageDocumentsComponent },
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' }, // Default child route
+    ],
   },
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full',
-  },
-  {
-    path: 'todo',
-    loadComponent: () => import('./todo/todo.page').then((m) => m.TodoPage),
-  },
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' }, // Redirect to the dashboard if no path is provided
 ];

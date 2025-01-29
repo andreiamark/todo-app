@@ -1,0 +1,19 @@
+<div class="view-supervised">
+  <h2>Lucrări supervizate</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Titlu</th>
+        <th>Student</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let thesis of supervisedTheses">
+        <td>{{ thesis.title }}</td>
+        <td>{{ thesis.student }}</td>
+        <td>{{ thesis.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

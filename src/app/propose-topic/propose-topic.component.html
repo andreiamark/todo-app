@@ -1,0 +1,37 @@
+<div class="propose-topic">
+  <h2 class="title">Propune o temă nouă</h2>
+  <form (ngSubmit)="submitTopic()" class="topic-form">
+    <label class="form-label">Titlu:</label>
+    <input
+      type="text"
+      [(ngModel)]="newTopic.title"
+      name="title"
+      required
+      class="form-input"
+    />
+
+    <label class="form-label">Descriere:</label>
+    <textarea
+      [(ngModel)]="newTopic.description"
+      name="description"
+      class="form-textarea"
+    ></textarea>
+
+    <label class="form-label">Nivel:</label>
+    <select [(ngModel)]="newTopic.level" name="level" class="form-select">
+      <option value="licenta">Licență</option>
+      <option value="disertatie">Disertație</option>
+      <option value="doctorat">Doctorat</option>
+    </select>
+
+    <label class="form-label">Număr maxim candidați:</label>
+    <input
+      type="number"
+      [(ngModel)]="newTopic.maxCandidates"
+      name="maxCandidates"
+      class="form-input"
+    />
+
+    <button type="submit" class="submit-btn">Propune Tema</button>
+  </form>
+</div>

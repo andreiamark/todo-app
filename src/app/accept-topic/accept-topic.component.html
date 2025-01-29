@@ -1,0 +1,6 @@
+<h2>Teme disponibile</h2>
+<div *ngFor="let topic of topics">
+  <h3>{{ topic.title }}</h3>
+  <p>{{ topic.description }}</p>
+  <button (click)="requestTopic(topic)">Solicită această temă</button>
+</div>
